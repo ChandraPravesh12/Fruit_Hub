@@ -3,7 +3,7 @@ import 'package:fruithub/Activity_1.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Activity1(),
+    home: SplashScreen(),
   ));
 }
 
@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Activity1()),
