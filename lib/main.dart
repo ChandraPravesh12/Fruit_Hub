@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fruithub/Activity_1.dart';
+import 'package:fruithub/Authentication.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: SplashScreen(),
+    home: Authentication(),
   ));
 }
 
