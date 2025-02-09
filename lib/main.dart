@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub/Activity_1.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: SplashScreen(),
+    home: Activity1(),
   ));
 }
 
@@ -11,6 +12,12 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Activity1()),
+      );
+    });
     return Scaffold(
       body: Center(
         child: Container(
