@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fruithub/Activity_1.dart';
 import 'package:fruithub/Authentication.dart';
+import 'package:fruithub/Order_Complete.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Authentication(),
+    home: Order(),
   ));
 }
 
@@ -16,7 +17,7 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Activity1()),
+        MaterialPageRoute(builder: (context) => Order()),
       );
     });
     return Scaffold(

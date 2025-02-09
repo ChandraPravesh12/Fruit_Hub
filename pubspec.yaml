@@ -62,6 +62,7 @@ flutter:
     - assets\images\image.png
     - assets\images\fruit_in_basket.png
     - assets\images\fruit_in_basket_2.png
+    - assets\images\tick.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
