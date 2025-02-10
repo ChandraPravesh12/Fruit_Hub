@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub/HomePage.dart';
+import 'package:fruithub/TrackOrder.dart';
 
 void main() {
   runApp(Order());
@@ -46,7 +48,12 @@ class Order extends StatelessWidget {
                     width: 200,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => Track()),
+                        );
+                      },
                       child: Text(
                         "Track Order",
                         style: TextStyle(color: Colors.white),
@@ -64,7 +71,12 @@ class Order extends StatelessWidget {
                     width: 200,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => Home()),
+                        );
+                      },
                       child: Text(
                         "Continue Shoping ",
                         style: TextStyle(color: Color(0xFFFFA451)),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruithub/HomePage.dart';
+import 'package:fruithub/Order_Complete.dart';
 import 'package:fruithub/main.dart';
 
 void main() {
@@ -200,6 +201,27 @@ class Basket extends StatelessWidget {
                         style: TextStyle(fontSize: 40),
                       )
                     ],
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Order()),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(11),
+                    child: Text(
+                      "Complete Order",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    backgroundColor: Color(0xFFFFA451),
                   ),
                 ),
               ],

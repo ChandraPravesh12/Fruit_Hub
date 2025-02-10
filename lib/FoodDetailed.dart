@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub/HomePage.dart';
+import 'package:fruithub/MyBasket.dart';
 
 void main() {
   runApp(Food());
@@ -14,6 +16,34 @@ class Food extends StatelessWidget {
         body: Scrollbar(
             child: Column(
           children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Home()));
+                    },
+                    icon: Icon(
+                      Icons.arrow_left,
+                      size: 30,
+                    ),
+                    label: Text("Back"),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30))),
+                    )),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: Image.asset(
+                "assets/images/fruit_in_basket_2.png", // Replace with your image
+                height: 200,
+                fit: BoxFit.cover,
+              ),
+            ),
             Spacer(),
             Container(
               height: MediaQuery.of(context).size.height * 0.60,
@@ -91,11 +121,17 @@ class Food extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Basket()),
+                              );
+                            },
                             child: Padding(
                               padding: const EdgeInsets.all(11),
                               child: Text(
-                                "Food",
+                                "Add To Basket",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
                               ),

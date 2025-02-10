@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub/HomePage.dart';
 import 'package:fruithub/main.dart';
 
 void main() {
@@ -29,8 +30,7 @@ class Track extends StatelessWidget {
                           onPressed: () {
                             Navigator.pushReplacement(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => SplashScreen()),
+                              MaterialPageRoute(builder: (context) => Home()),
                             );
                           },
                           icon: Icon(
