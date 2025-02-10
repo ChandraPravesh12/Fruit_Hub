@@ -6,7 +6,7 @@ import 'package:fruithub/TrackOrder.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Track(),
+    home: SplashScreen(),
   ));
 }
 
@@ -15,12 +15,6 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => Order()),
-      );
-    });
     return Scaffold(
       body: Center(
         child: Container(
@@ -33,12 +27,86 @@ class SplashScreen extends StatelessWidget {
               )),
           child: Column(
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    image: DecorationImage(
-                        image: AssetImage("assets/images/image.png"))),
+              Spacer(),
+              ElevatedButton(
+                onPressed: () {
+                  Future.delayed(Duration(seconds: 3), () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Activity1()),
+                    );
+                  });
+                },
+                child: Text(
+                  "Let's Continue",
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                  ),
+                  backgroundColor: Color(0xFFFFA451),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Future.delayed(Duration(seconds: 3), () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Authentication()),
+                    );
+                  });
+                },
+                child: Text(
+                  "Authentication",
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                  ),
+                  backgroundColor: Color(0xFFFFA451),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Future.delayed(Duration(seconds: 3), () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Order()),
+                    );
+                  });
+                },
+                child: Text(
+                  "OrderComplete",
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                  ),
+                  backgroundColor: Color(0xFFFFA451),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Future.delayed(Duration(seconds: 3), () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Track()),
+                    );
+                  });
+                },
+                child: Text(
+                  "TrackOrder",
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                  ),
+                  backgroundColor: Color(0xFFFFA451),
+                ),
               ),
             ],
           ),

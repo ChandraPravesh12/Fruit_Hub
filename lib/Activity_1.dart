@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub/Authentication.dart';
 
 void main() {
   runApp(Activity1());
@@ -69,14 +70,19 @@ class FruitSaladScreen extends StatelessWidget {
                       color: Colors.black54,
                     ),
                   ),
-                  Spacer(),
+                  // Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 50),
                     child: Container(
                       width: 400,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Authentication()));
+                        },
                         child: Text(
                           "Let's Continue",
                           style: TextStyle(color: Colors.white),
@@ -89,7 +95,7 @@ class FruitSaladScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
