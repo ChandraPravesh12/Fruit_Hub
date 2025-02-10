@@ -9,7 +9,7 @@ import 'package:fruithub/TrackOrder.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Home(),
+    home: SplashScreen(),
   ));
 }
 
@@ -150,6 +150,24 @@ class SplashScreen extends StatelessWidget {
                 },
                 child: Text(
                   "Food",
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                  ),
+                  backgroundColor: Color(0xFFFFA451),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => Home()),
+                  );
+                },
+                child: Text(
+                  "Home",
                   style: TextStyle(color: Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(

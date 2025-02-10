@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub/HomePage.dart';
 
 void main() {
   runApp(Authentication());
@@ -16,7 +17,7 @@ class Authentication extends StatelessWidget {
 
 class Authenticationh extends StatelessWidget {
   final TextEditingController _controller = TextEditingController();
-  String _Name = "";
+  String Name = " ";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +79,7 @@ class Authenticationh extends StatelessWidget {
                         border: InputBorder.none,
                       ),
                       onChanged: (value) {
-                        _Name = value;
+                        Name = value;
                       },
                     ),
                   ),
@@ -89,7 +90,10 @@ class Authenticationh extends StatelessWidget {
                       width: 400,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Home()));
+                        },
                         child: Text(
                           "Let's Continue",
                           style: TextStyle(color: Colors.white),

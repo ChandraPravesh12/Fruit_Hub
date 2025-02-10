@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub/HomePage.dart';
 import 'package:fruithub/main.dart';
 
 void main() {
@@ -22,10 +23,8 @@ class Basket extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(10, 50, 0, 0),
                     child: ElevatedButton.icon(
                         onPressed: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SplashScreen()));
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) => Home()));
                         },
                         icon: Icon(
                           Icons.arrow_left,
@@ -41,7 +40,7 @@ class Basket extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(40, 50, 0, 0),
                     child: Text(
-                      "Delivery Status",
+                      "My Basket",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 25,
@@ -201,26 +200,6 @@ class Basket extends StatelessWidget {
                         style: TextStyle(fontSize: 40),
                       )
                     ],
-                  ),
-                ),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "Checkout",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                      ),
-                      backgroundColor: Color(0xFFFFA451),
-                    ),
                   ),
                 ),
               ],
