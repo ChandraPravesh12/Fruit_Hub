@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:fruithub/Activity_1.dart';
 import 'package:fruithub/Authentication.dart';
 import 'package:fruithub/FoodDetailed.dart';
+import 'package:fruithub/HomePage.dart';
 import 'package:fruithub/MyBasket.dart';
 import 'package:fruithub/Order_Complete.dart';
 import 'package:fruithub/TrackOrder.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: SplashScreen(),
+    home: Home(),
   ));
 }
 
