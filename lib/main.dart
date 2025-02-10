@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fruithub/Activity_1.dart';
 import 'package:fruithub/Authentication.dart';
+import 'package:fruithub/MyBasket.dart';
 import 'package:fruithub/Order_Complete.dart';
 import 'package:fruithub/TrackOrder.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: SplashScreen(),
+    home: Basket(),
   ));
 }
 
@@ -79,6 +80,26 @@ class SplashScreen extends StatelessWidget {
                 },
                 child: Text(
                   "OrderComplete",
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                  ),
+                  backgroundColor: Color(0xFFFFA451),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Future.delayed(Duration(seconds: 3), () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Basket()),
+                    );
+                  });
+                },
+                child: Text(
+                  "Basket",
                   style: TextStyle(color: Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(
