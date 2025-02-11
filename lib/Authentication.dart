@@ -17,7 +17,6 @@ class Authentication extends StatelessWidget {
 
 class Authenticationh extends StatelessWidget {
   final TextEditingController _controller = TextEditingController();
-  String Name = " ";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,9 +77,7 @@ class Authenticationh extends StatelessWidget {
                         hintText: "ChandraPravesh",
                         border: InputBorder.none,
                       ),
-                      onChanged: (value) {
-                        Name = value;
-                      },
+                      onChanged: (value) {},
                     ),
                   ),
                   Spacer(),

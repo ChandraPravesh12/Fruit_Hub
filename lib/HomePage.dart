@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruithub/FoodDetailed.dart';
-import 'package:fruithub/MyBasket.dart';
 import 'package:fruithub/Order_Complete.dart';
 import 'package:fruithub/TrackOrder.dart';
 
@@ -55,7 +54,7 @@ class Home extends StatelessWidget {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Basket()),
+                                        builder: (context) => Home()),
                                   );
                                 },
                                 icon: Icon(

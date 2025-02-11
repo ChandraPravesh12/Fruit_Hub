@@ -3,8 +3,17 @@ import 'package:fruithub/Activity_1.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: SplashScreen(),
+    home: Example(),
   ));
+}
+
+class Example extends StatelessWidget {
+  const Example({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SplashScreen();
+  }
 }
 
 class SplashScreen extends StatefulWidget {

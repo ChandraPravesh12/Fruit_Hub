@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruithub/HomePage.dart';
-import 'package:fruithub/MyBasket.dart';
 
 void main() {
   runApp(Food());
@@ -124,8 +123,7 @@ class Food extends StatelessWidget {
                             onPressed: () {
                               Navigator.pushReplacement(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => Basket()),
+                                MaterialPageRoute(builder: (context) => Home()),
                               );
                             },
                             child: Padding(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruithub/HomePage.dart';
-import 'package:fruithub/main.dart';
 
 void main() {
   runApp(Track());
