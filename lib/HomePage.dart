@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
                                 },
                                 icon: Icon(
                                   Icons.shopping_bag,
-                                  size: 30,
+                                  size: 20,
                                   color: Color(0xFFFFA451),
                                 ),
                                 label: Text("Track Order"),
@@ -60,7 +60,7 @@ class Home extends StatelessWidget {
                                 },
                                 icon: Icon(
                                   Icons.shopping_bag,
-                                  size: 30,
+                                  size: 20,
                                   color: Color(0xFFFFA451),
                                 ),
                                 label: Text("My Basket"),
